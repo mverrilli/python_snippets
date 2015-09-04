@@ -21,9 +21,13 @@ while True:
         data = server.recv(16384)
         if len(data) > 0:
             client.send(data)
+        else:
+            break
         print 'SERVER BYTES', ":".join("{:02x}".format(ord(c)) for c in data)
     if client in ready_sockets:
         data = client.recv(16384)
         if len(data):
             server.send(data)
+        else:
+            break
         print 'CLIENT BYTES', ":".join("{:02x}".format(ord(c)) for c in data)
