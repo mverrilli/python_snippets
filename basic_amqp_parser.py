@@ -111,7 +111,6 @@ def basic_amqp_parser(source):
     ts = None
     packet_stream = bytearray()
     while True:
-        print ':'.join('{:02x}'.format(c) for c in packet_stream)
 
         try: 
             while len(packet_stream) < max(AMQP_FRAME_HEADER_SIZE,len(AMQP_PROTOCOL_HEADER)):
