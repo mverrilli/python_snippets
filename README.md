@@ -11,5 +11,5 @@ Meant to be used with tcp_middle_man.py.  You send it streams of data as they ar
 ### hex_dump_noparser.py
 Meant to be used with tcp_middle_man.py.  You send it streams of data as they are received from the sockets, and it will simply print the hex strings that it sees.  Good for when you just want manually parse your frames as one-offs.  If you are going to do this often, write a parser for your protocol. This is implemented as a coroutine.  
 
-### sql_functions.py
+## sql_functions.py
 Python implementation of some common sql functions found in Vertica (and maybe Postgresql). Useful if you are converting formulas out of the database and into Python for transformation.
