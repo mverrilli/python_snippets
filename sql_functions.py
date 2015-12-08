@@ -100,7 +100,7 @@ def sql_regexp_replace( txt, target, replacement=None, position=1, occurrence=1,
                 return ''
     return ''
 
-def sql_regexp_replace( txt, pattern, replacement=None, position=1, occurrence=0, regexp_modifier='c'):
+def sql_regexp_replace( txt, pattern, replacement='', position=1, occurrence=0, regexp_modifier='c'):
     class ReplWrapper(object):
         def __init__(self, replacement, occurrence):
             self.count = 0
